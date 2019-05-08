@@ -8,9 +8,9 @@
 #else
     #ifdef __GNUC__ >= 4
         #ifdef POINTINPOLY_EXPORTS
-            #define _PIPIMOREX _declspec(dllexport)
+            #define _PIPIMOREX __attribute__((visibility("default")))
         #else
-            #define _PIPIMOREX _declspec(dllimport)
+            #define _PIPIMOREX __attribute__((visibility("hidden")))
         #endif
     #else
         #define _PIPIMOREX
